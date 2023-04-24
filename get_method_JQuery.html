@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX GET Method(With JQuery)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h1>GET Method With JQuery</h1>
+  <div id="test"></div>
+  <script>
+    $.get("vj.txt", function(info) {
+      $("#test").html(info);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX GET Request(Without JQuery)</title>
+</head>
+<body>
+    <h1>GET Method Without JQuery</h1>
+  <div id="test"></div>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("test").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "vj.txt", true);
+    xmlhttp.send();
+  </script>
+</body>
+</html>

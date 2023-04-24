@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Alkatra:wght@400;500&family=Fira+Sans:ital,wght@1,400;1,500&family=Lobster&family=Niconne&family=Roboto&family=Roboto+Slab&family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      .container {
+        margin-top: 150px;
+        text-align: center;
+        font-family: "Alkatra", cursive;
+        font-size: 20px;
+      }
+      .info {
+        margin: auto;
+        width: 300px;
+        text-align: left;
+        font-family: "Alkatra", cursive;
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        background-image: linear-gradient(
+          rgb(78, 188, 232),
+          rgb(147, 214, 241)
+        );
+        box-shadow: 10px 10px 8px #a8a7a7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Data Stored In Local Storage</h2>
+      <div class="info">
+        <p id="name"></p>
+        <p id="email"></p>
+        <p id="mobno"></p>
+        <p id="persons"></p>
+        <p id="rooms"></p>
+        <p id="date"></p>
+        <p id="cdate"></p>
+      </div>
+    </div>
+    <script>
+      const customName = document.getElementById("name");
+      const customEmail = document.getElementById("email");
+      const customMob = document.getElementById("mobno");
+      const PersonCount = document.getElementById("persons");
+      const RoomsCount = document.getElementById("rooms");
+      const CheckInDate = document.getElementById("date");
+      const CheckOutDate = document.getElementById("cdate");
+
+    //   Data Retreival
+      customName.innerText = "Name: " + localStorage.getItem("Name");
+      customEmail.innerText = "Email: " + localStorage.getItem("Email");
+      customMob.innerText = "Mobile Number: " + localStorage.getItem("Mob");
+      PersonCount.innerText =
+        "No of Persons: " + localStorage.getItem("Persons");
+      RoomsCount.innerText = "No of Rooms: " + localStorage.getItem("Rooms");
+      CheckInDate.innerText =
+        "Check In Date: " + localStorage.getItem("CheckIn");
+      CheckOutDate.innerText =
+        "Check Out Date: " + localStorage.getItem("CheckOut");
+    </script>
+  </body>
+</html>
